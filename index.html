@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Module</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="top-right">
+            <div id="voterDetails" class="voter-details">
+                <p id="voterName">Loading...</p>
+                <p id="voterIdDisplay">Loading...</p>
+            </div>
+        </div>
+        <h1>Cast your vote securely</h1>
+        <div class="voting-area">
+            <h2>Cast Vote</h2>
+            <div class="candidates">
+                </div>
+            <button id="submitVote" class="submit-vote-btn" disabled>Submit</button>
+            <p id="voteTimer">--:--</p>
+            <p id="delayMessage" class="delay-message"></p>
+        </div>
+        <div class="bottom-right">
+            <div class="station-details">
+                <p id="stationId">Loading...</p>
+                <p id="status">Loading...</p>
+            </div>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Deactivate the Station</button>
+    </div>
+
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Password</h2>
+            <input type="password" id="passwordInput" placeholder="Password">
+            <div class="modal-buttons">
+                <button id="submitPassword">Submit</button>
+                <button id="cancelPassword">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirm Logout</h2>
+            <p>Deactivate this station?</p>
+            <div class="modal-buttons">
+                <button id="confirmLogout">Yes</button>
+                <button id="cancelLogout">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light text-center py-2 small">
+        <p class="mb-0">
+          Right-click is disabled. Some keyboard shortcuts are blocked.<br>
+          Try pressing F12, Ctrl+Shift+I, Ctrl+U — they are blocked.
+        </p>
+      </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/security.js"></script>
+    
+</body>
+</html>
